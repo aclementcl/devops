@@ -4,7 +4,7 @@ A quick deployment of a website using Vagrant+VirtualBox+Ansible+DockerCompose
 
 # Install VirtualBox
 
-Go to https://www.virtualbox.org/wiki/Linux_Downloads and download and install the version of VBOX for you OS.
+Go to https://www.virtualbox.org/wiki/Linux_Downloads and download and install the version of VBOX for your OS.
 
 In my case I download the file -> https://download.virtualbox.org/virtualbox/5.2.8/VirtualBox-5.2-5.2.8_121009_openSUSE132-1.x86_64.rpm
 
