@@ -11,7 +11,7 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 
 1. Instalar VirtualBox & Vagrant (si no están instalado ya)
 2. Clonar el repo devops-challenge con ```# git clone https://github.com/marcossv9/devops-challenge``` y colóquelo en el directorio desde el que desea iniciar la VM.
-3. Navegar al directorio de repos local e inicie la VM con Vagrant usando el comando ```# sudo vagrant up```
+3. Navegar al directorio de repo local e inicie la VM con Vagrant usando el comando ```# vagrant up```
 4. A disfrutar!
 
 ## Si desea hacer todo manualmente, siga estos pasos:
@@ -72,7 +72,7 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 
 * Pruebe el sitio web usando un navegador de preferencia y vaya a la siguiente URL desde su máquina Host:
 
-- http://127.0.0.1:8080
+- [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ## Recursos utilizados
 
