@@ -1,4 +1,4 @@
-# Devops-Challenge
+# Devops-Challenge -- BETA VERSION
 
 A quick deployment of a website using Vagrant+VirtualBox+Ansible+DockerCompose
 
