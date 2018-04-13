@@ -77,3 +77,7 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 ## Recursos utilizados
 
 * Template de website descargado del siguiente [link](http://www.free-css.com/free-css-templates/page226/app-starter)
+
+## Diagrama de Flujo
+
+* [Diagrama](https://coggle.it/diagram/WtAgTGZ72gFFRfJI/t/logo-bennu1-devops-challenge/3e29c253a552c8b0a9c402e866c838db318f5e1fdfa4fa2611b0fed655dac3d7)
