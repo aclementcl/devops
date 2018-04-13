@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |ansible| # Use Ansible as a plocal provisioner
     ansible.playbook = "playbook.yml" # Path to the Ansible Playbook to install Docker
     ansible.install_mode = "pip" # Install Ansible on the VM with pip
-    #ansible.version = "2.5.0"  # Choose Ansible specified version
+    #ansible.version = "2.5.0"  # Choose a specified Ansible version to install
   end
   config.vm.network :forwarded_port, guest: 80, host: 8080 ## Port Forwarding from VM (80) to local host (8080)
 end
