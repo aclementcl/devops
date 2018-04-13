@@ -18,15 +18,15 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 
 **Instalar VirtualBox**
 
-Vaya a https://www.virtualbox.org/wiki/Linux_Downloads y descargue e instale la versión de VBOX para su sistema operativo.
+Vaya a [descargas](https://www.virtualbox.org/wiki/Linux_Downloads) y descargue e instale la versión de VBOX para su sistema operativo.
 
-En mi caso, descargo el archivo -> https://download.virtualbox.org/virtualbox/5.2.8/VirtualBox-5.2-5.2.8_121009_openSUSE132-1.x86_64.rpm
+En mi caso, descargo el [archivo](https://download.virtualbox.org/virtualbox/5.2.8/VirtualBox-5.2-5.2.8_121009_openSUSE132-1.x86_64.rpm)
 
 Yo lo instalé con el comando ```# sudo zypper in VirtualBox-5.2-5.2.8_121009_openSUSE132-1.x86_64.rpm ```
 
 **Instalar Vagrant**
 
-Vaya a https://www.vagrantup.com/downloads.html y siga los pasos para instalar Vagrant en su sistema operativo preferido.
+Vaya a [descargas](https://www.vagrantup.com/downloads.html) y siga los pasos para instalar Vagrant en su sistema operativo preferido.
 
 En este caso, uso OpenSuseLEAP para lo que el comando que usé fue ```# sudo zypper en vagrant_2.0.3_x86_64rpm```
 
@@ -40,9 +40,7 @@ Utilizar el comando ```# init vagrant```
 
 **Editar el Vagrantfile para definir una VM con Docker Engine y Docker-compose. A continuación se ejecutará un Ansible-playbook local para iniciar dos Contenedores Docker dentro de la VM utilizando Docker Compose**
 
-Aquí está el archivo Vagrant con comentarios para entender cada línea del archivo:
-
-https://github.com/marcossv9/devops-challenge/blob/master/Vagrantfile
+Aquí está el [archivo](https://github.com/marcossv9/devops-challenge/blob/master/Vagrantfile) Vagrant con comentarios para entender cada línea del mismo.
 
 **Crear dos Dockerfile que Docker Compose ejecutará para correr un sitio web y un servidor proxy**
 
@@ -50,33 +48,21 @@ Crear una carpeta para Docker Compose donde va a alojar dos Dockerfile, uno para
 
 Luego, dentro de la carpeta ¨compose¨ crear 2 carpetas en el nivel raíz del directorio ¨Vagrant-Project¨. Ejecutar lo siguientes comandos en orden: ```# mkdir app``` y ```# mkdir proxy```
 
-Dentro de la carpeta "app" crear un archivo llamado "Dockerfile" y escibir el siguiente código dentro de él:
+Dentro de la carpeta "app" crear un archivo llamado "Dockerfile" y escibir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/app/Dockerfile) dentro de él:
 
-https://github.com/marcossv9/devops-challenge/blob/master/compose/app/Dockerfile
+También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. El link de descarga es el [éste](https://github.com/marcossv9/devops-challenge/tree/master/compose/app/site).
 
-También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. EL link de descarga es el siguiente:
+Ahora dentro de la carpeta "proxy" crear un archivo llamado "Dockerfile" y escribir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/Dockerfile) dentro de él:
 
-https://github.com/marcossv9/devops-challenge/tree/master/compose/app/site
-
-Ahora dentro de la carpeta "proxy" crear un archivo llamado "Dockerfile" y escribir el siguiente código dentro de él:
-
-https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/Dockerfile
-
-Crear también un archivo llamado "proxy.conf" dentro de la carpeta ¨proxy¨, que contenga toda la configuración del proxy para NGINX. Se debe usar este código:
-
-https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/proxy.conf
+Crear también un archivo llamado "proxy.conf" dentro de la carpeta ¨proxy¨, que contenga toda la configuración del proxy para NGINX. Se debe usar este [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/proxy.conf).
 
 **Crear un archivo Docker Compose para crear y ejecutar los Contenedores definidos en los Dockerfile creados antes**
 
-Dentro de la carpeta ¨compose¨ crear un archivo llamado ¨docker-compose.yml¨ con este código adentro:
-
-https://github.com/marcossv9/devops-challenge/blob/master/compose/docker-compose.yml
+Dentro de la carpeta ¨compose¨ crear un archivo llamado ¨docker-compose.yml¨ con este [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/docker-compose.yml) adentro.
 
 **Configurar Ansible-playbook para aprovisionar cambios en la máquina virtual al inicio**
 
-Crear un archivo en el directorio raíz del projecto (Vagrant-Project) y llamarlo ¨playbook.yml¨ y escribir el código que aquí se menciona:
-
-https://github.com/marcossv9/devops-challenge/blob/master/playbook.yml
+Crear un archivo en el directorio raíz del projecto (Vagrant-Project) y llamarlo ¨playbook.yml¨ y escribir el código que [aquí](https://github.com/marcossv9/devops-challenge/blob/master/playbook.yml) se menciona.
 
 **Crear la VM con todo lo descrito antes**
 
@@ -90,4 +76,4 @@ Pruebe el sitio web usando un navegador de preferencia y vaya a la siguiente URL
 
 ## Recursos utilizados
 
-Template de website descargado de http://www.free-css.com/free-css-templates/page226/app-starter
+Template de website descargado del siguiente [link](http://www.free-css.com/free-css-templates/page226/app-starter)
