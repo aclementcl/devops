@@ -1,18 +1,19 @@
 -   hosts: all
     become: true
     tasks:
-    - name: ensure repository key is installed
+    - name: asegurarse que la llave del repositorio está instalada
       apt_key:
         id: "58118E89F3A912897C070ADBF76221572C52609D"
         keyserver: "hkp://p80.pool.sks-keyservers.net:80"
         state: present
 
-    - name: ensure docker registry is available
-      # For Ubuntu 14.04 LTS, use this repository:
+    - name: asegurarse que el repositorio de docker esté disponible
+      # Para Ubuntu 14.04 LTS, usar este repositorio:
       apt_repository: 
-        repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' state=present
+        repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' 
+        state=present
 
-    - name: ensure docker and dependencies are installed
+    - name: asegurarse que docker y sus dependencias estén instalados
       apt: 
         name=docker-engine 
         update_cache=yes
@@ -21,7 +22,7 @@
         name=docker 
         state=restarted
     
-    #- name: run a docker container using a project directory
+    #- name: ejecutar conenedores docker usando el directorio de un proyecto
     - docker_service:
         project_src: compose
         state: present
