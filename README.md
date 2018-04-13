@@ -1,15 +1,15 @@
-#Devops-Challenge -- BETA VERSION
+# Devops-Challenge -- BETA VERSION
 
 A quick deployment of a website using Vagrant+VirtualBox+Ansible+DockerCompose
 
-##To get everything up & running:
+## To get everything up & running:
 
 1. Install Virtual Platform & Vagrant (if not installed already)
 2. Clone devops-challenge git repo # git clone https://github.com/marcossv9/devops-challenge and place it on the directory you want to launch vagrant from.
 3. Navigate to local repo directory & start vagrant ```# sudo vagrant up```
 4. Enjoy
 
-##If you want to do the whole thing manually follow this steps:
+## If you want to do the whole thing manually follow this steps:
 
 **Install VirtualBox**
 
