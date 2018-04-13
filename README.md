@@ -1,4 +1,4 @@
-# devops-challenge
+# Devops-Challenge
 
 A quick deployment of a website using Vagrant+VirtualBox+Ansible+DockerCompose
 
