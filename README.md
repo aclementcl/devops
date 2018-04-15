@@ -12,7 +12,8 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 1. Instalar VirtualBox & Vagrant (si no están instalado ya)
 2. Clonar el repo devops-challenge con ```# git clone https://github.com/marcossv9/devops-challenge``` y colóquelo en el directorio desde el que desea iniciar la VM.
 3. Navegar al directorio de repo local e inicie la VM con Vagrant usando el comando ```# vagrant up```
-4. A disfrutar!
+4. Pruebe el sitio web usando un navegador de preferencia y vaya a la siguiente URL desde su máquina Host: [http://127.0.0.1:8080](http://127.0.0.1:8080) 
+5. A disfrutar!
 
 ## Si desea hacer todo manualmente, siga estos pasos:
 
@@ -50,7 +51,7 @@ Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Do
 
 * Dentro de la carpeta "app" crear un archivo llamado "Dockerfile" y escibir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/app/Dockerfile) dentro de él:
 
-* También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. El link de descarga es el [éste](https://github.com/marcossv9/devops-challenge/tree/master/compose/app/site).
+* También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. El link de descarga es [éste](https://github.com/marcossv9/devops-challenge/tree/master/compose/app/site).
 
 * Ahora dentro de la carpeta "proxy" crear un archivo llamado "Dockerfile" y escribir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/Dockerfile) dentro de él:
 
