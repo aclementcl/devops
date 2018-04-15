@@ -6,7 +6,6 @@ Vagrant.configure("2") do |config|
       shell.inline = <<-SHELL
         sudo apt-get -y install python-pip
         sudo pip install --ignore-installed six
-        sudo pip install docker-compose
       SHELL
   end
   config.vm.provision "ansible_local" do |ansible| # Usar Ansible como un aprovisionador local
