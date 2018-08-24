@@ -1,6 +1,6 @@
 # Devops - VERSIÓN BETA
 
-Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + DockerCompose
+Un despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + DockerCompose + Nginx
 
 ## Requisitos de versión de herramientas que usaremos:
 
