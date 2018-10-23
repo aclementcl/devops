@@ -10,7 +10,7 @@ Despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Docke
 ## Para poner todo en marcha de la forma fácil y rápida:
 
 1. Instalar VirtualBox & Vagrant (si no están instalado ya)
-2. Clonar el repo devops-challenge con ```# git clone https://github.com/marcossv9/devops-challenge``` y colóquelo en el directorio desde el que desea iniciar la VM.
+2. Clonar el repo devops-challenge con ```# git clone https://github.com/marcossv9/devops``` y colóquelo en el directorio desde el que desea iniciar la VM.
 3. Navegar al directorio de repo local e inicie la VM con Vagrant usando el comando ```# vagrant up```
 4. Pruebe el sitio web usando un navegador de preferencia y vaya a la siguiente URL desde su máquina Host: [http://127.0.0.1:8080](http://127.0.0.1:8080) 
 5. A disfrutar!
@@ -41,7 +41,7 @@ Despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Docke
 
 **Editar el Vagrantfile para definir una VM con Docker Engine y Docker-compose. A continuación se ejecutará un Ansible-playbook local para iniciar dos Contenedores Docker dentro de la VM utilizando Docker Compose**
 
-* Aquí está el [archivo](https://github.com/marcossv9/devops-challenge/blob/master/Vagrantfile) Vagrant con comentarios para entender cada línea del mismo.
+* Aquí está el [archivo](https://github.com/marcossv9/devops/blob/master/Vagrantfile) Vagrant con comentarios para entender cada línea del mismo.
 
 **Crear dos Dockerfile que Docker Compose ejecutará para correr un sitio web y un servidor proxy**
 
@@ -49,21 +49,21 @@ Despliegue rápido de un sitio web usando Vagrant + VirtualBox + Ansible + Docke
 
 * Luego, dentro de la carpeta ¨compose¨ crear 2 carpetas en el nivel raíz del directorio ¨Vagrant-Project¨. Ejecutar lo siguientes comandos en orden: ```# mkdir app``` y ```# mkdir proxy```
 
-* Dentro de la carpeta "app" crear un archivo llamado "Dockerfile" y escibir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/app/Dockerfile) dentro de él:
+* Dentro de la carpeta "app" crear un archivo llamado "Dockerfile" y escibir el siguiente [código](https://github.com/marcossv9/devops/blob/master/compose/app/Dockerfile) dentro de él:
 
-* También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. El link de descarga es [éste](https://github.com/marcossv9/devops-challenge/tree/master/compose/app/site).
+* También descargue y copie en el directorio ¨app¨, el contenido del directorio ¨site¨, el cual contendrá nuestra página web de pruebas. El link de descarga es [éste](https://github.com/marcossv9/devops/tree/master/compose/app/site).
 
-* Ahora dentro de la carpeta "proxy" crear un archivo llamado "Dockerfile" y escribir el siguiente [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/Dockerfile) dentro de él:
+* Ahora dentro de la carpeta "proxy" crear un archivo llamado "Dockerfile" y escribir el siguiente [código](https://github.com/marcossv9/devops/blob/master/compose/proxy/Dockerfile) dentro de él:
 
-* Crear también un archivo llamado "proxy.conf" dentro de la carpeta ¨proxy¨, que contenga toda la configuración del proxy para NGINX. Se debe usar este [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/proxy/proxy.conf).
+* Crear también un archivo llamado "proxy.conf" dentro de la carpeta ¨proxy¨, que contenga toda la configuración del proxy para NGINX. Se debe usar este [código](https://github.com/marcossv9/devops/blob/master/compose/proxy/proxy.conf).
 
 **Crear un archivo Docker Compose para crear y ejecutar los Contenedores definidos en los Dockerfile creados antes**
 
-* Dentro de la carpeta ¨compose¨ crear un archivo llamado ¨docker-compose.yml¨ con este [código](https://github.com/marcossv9/devops-challenge/blob/master/compose/docker-compose.yml) adentro.
+* Dentro de la carpeta ¨compose¨ crear un archivo llamado ¨docker-compose.yml¨ con este [código](https://github.com/marcossv9/devops/blob/master/compose/docker-compose.yml) adentro.
 
 **Configurar Ansible-playbook para aprovisionar cambios en la máquina virtual al inicio**
 
-* Crear un archivo en el directorio raíz del projecto (Vagrant-Project) y llamarlo ¨playbook.yml¨ y escribir el código que [aquí](https://github.com/marcossv9/devops-challenge/blob/master/playbook.yml) se menciona.
+* Crear un archivo en el directorio raíz del projecto (Vagrant-Project) y llamarlo ¨playbook.yml¨ y escribir el código que [aquí](https://github.com/marcossv9/devops/blob/master/playbook.yml) se menciona.
 
 **Crear la VM con todo lo descrito antes**
 
